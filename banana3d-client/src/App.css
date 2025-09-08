@@ -1,0 +1,138 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  font-family: sans-serif;
+  background-color: rgb(250, 212, 0)
+}
+
+.app-header {
+  text-align: center;
+  color: black;
+}
+
+.reset-button {
+  margin-top: 10px;
+}
+
+.canvas-container {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 450px;
+  width: 450px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  border: 2px dashed gray;
+}
+
+/* Ensure the canvas itself fills the container */
+canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  padding-left: 10px;
+}
+
+.step {
+  margin-top: 0;
+  padding: 10px;
+}
+
+.model-preview-container {
+  margin-top: 10px;
+   /* Constrain the size of the preview image */
+  height: 450px;
+  border-radius: 8px;
+  border: 2px dashed gray;
+}
+
+.image-preview-container {
+  margin-top: 10px;
+   /* Constrain the size of the preview image */
+  height: 200px;
+  width: 200px;
+
+  /* This helps center the image inside if it's smaller */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: black;
+  gap: 5px;
+
+  border-radius: 8px;
+  border: 2px dashed gray;
+}
+
+.source-preview-image {
+  max-width: 100%; /* Crucial: ensures the image fits the container's width */
+  max-height: 100%;
+  height: auto; /* Maintains the image's aspect ratio */
+  border-radius: 8px;
+}
+
+.view-row-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 10px;
+}
+
+.error-message {
+  color: red;
+}
+
+.canvas-container {
+  flex-grow: 1; /* Makes the canvas fill the remaining space */
+}
+
+.placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  color: #888;
+  font-size: 1.2rem;
+}
+
+.label {
+  color: black
+}
+
+.spinner {
+  /* Size of the spinner */
+  width: 40px;
+  height: 40px;
+
+  /* The "track" of the spinner */
+  border: 4px solid rgba(0, 0, 0, 0.1); 
+  
+  /* The moving part of the spinner */
+  border-left-color: #007bff; /* Use your app's primary color */
+  
+  /* Make it a circle */
+  border-radius: 50%;
+  
+  /* The animation */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  opacity: 0;
+}

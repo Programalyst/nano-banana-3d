@@ -1,0 +1,10 @@
+# .gcloudignore
+
+.gcloudignore
+.gitignore
+.env
+.venv/
+__pycache__/
+*.pyc
+source-images/
+generated-views/

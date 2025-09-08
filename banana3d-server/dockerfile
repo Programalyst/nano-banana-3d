@@ -1,0 +1,19 @@
+# 1. Use an official, lean Python base image
+FROM python:3.11-slim
+
+# 2. Set the working directory inside the container
+WORKDIR /app
+
+# 3. Copy the requirements file first (for better caching)
+COPY requirements.txt .
+
+# 4. Install the Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# 5. Copy the rest of your application code into the container
+COPY . .
+
+# 6. Tell Cloud Run to start Hypercorn.
+#    - Use 0.0.0.0 to listen on all available network interfaces.
+#    - Use the $PORT environment variable provided by Cloud Run.
+CMD ["hypercorn", "main:app", "--bind", "0.0.0.0:8080"]```
