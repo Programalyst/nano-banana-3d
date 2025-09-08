@@ -1,6 +1,8 @@
 # Nano Banana enhanced Image to 3D Model
 ![Preview of the UI](./images/banana-to-3d-ui.png)
 
+[Quick Video Demo](https://youtu.be/zdzSpwQlYcQ)
+
 Image to 3D models CAN generate from just a single reference image. However, there can be unexpected results as the model is unable to "see" what detail should be modelled where the detail is not visible from the current view angle.
 
 This 3D model I generated with Hunyuan 2.5 has unnaturally long the fingers on her right hand because the hand is partially hidden from view in the original source image.  <img src="./images/hunyun25-uv-long fingers.jpg" alt="drawing" width="500"/>  
