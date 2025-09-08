@@ -17,10 +17,10 @@ SOURCE_IMAGES_DIR.mkdir(exist_ok=True)
 GENERATED_VIEWS_DIR.mkdir(exist_ok=True)
 
 required_files = {
-            "front": GENERATED_VIEWS_DIR / "generated_front_view.png",
-            "back": GENERATED_VIEWS_DIR / "generated_back_view.png",
-            "left": GENERATED_VIEWS_DIR / "generated_left_view.png",
-        }
+    "front": GENERATED_VIEWS_DIR / "generated_front_view.png",
+    "back": GENERATED_VIEWS_DIR / "generated_back_view.png",
+    "left": GENERATED_VIEWS_DIR / "generated_left_view.png",
+}
 
 # --- Endpoints for Step 2 ---
 @app.route('/generate-views', methods=['POST'])

@@ -21,14 +21,12 @@ function App() {
 
   // State to hold the selected image file
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  // State to hold the temporary URL for displaying the selected image
   const [sourceImageUrl, setSourceImageUrl] = useState<string | undefined>(undefined);
 
   const [generatedViews, setGeneratedViews] = useState<GeneratedViews>({});
 
   // State to store the URL of the generated .glb model
-  const [modelUrl, setModelUrl] = useState<string>("https://v3.fal.media/files/elephant/EBTZQeI2f48RSZtixVXrW_multiview_mesh-1757300667.glb");
-  //const [modelUrl, setModelUrl] = useState<string>("");
+  const [modelUrl, setModelUrl] = useState<string>("");
   const [error, setError] = useState<string | null>(null);
 
   // Use useRef to hold interval IDs to prevent re-renders from affecting them
