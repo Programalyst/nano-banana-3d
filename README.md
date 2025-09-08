@@ -32,6 +32,7 @@ I use Tencent's [Hunyuan 2.0 MultiView](https://fal.ai/models/fal-ai/hunyuan3d/v
     # Create a .env file
     touch .env
     # Set your GEMINI_API_KEY=AI... and FAL_KEY=672-... in .env
+    # Set allowed CORS_ORIGINS=http://localhost:3000 in .env
     hypercorn main:app --reload --bind 127.0.0.1:5500
 ```
 

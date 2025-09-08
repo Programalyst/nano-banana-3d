@@ -6,9 +6,14 @@ from pathlib import Path
 from utils import to_data_url
 from bananaGen import generate_character_views
 from falGen3d import generate_3d_model_from_views
+import os
 
 app = Flask(__name__)
-CORS(app)
+
+from dotenv import load_dotenv
+load_dotenv()
+allowed_origins = os.environ.get("CORS_ORIGINS", "").split(",")
+CORS(app, resources={r"/*": {"origins": allowed_origins}})
 
 BASE_DIR = Path(__file__).resolve().parent
 SOURCE_IMAGES_DIR = BASE_DIR / "source-images"
